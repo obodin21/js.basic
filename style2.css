@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: 'Oswald', sans-serif;
+    color: #222;
+
+}
+
+#wrapper{
+    background-color:  #ddd;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background-color: black;
+    display: block;
+    width: 100%;
+    z-index: 10;
+}
+
+#navbar nav,.row{
+    display: flex;
+}
+
+#navbar nav a{
+    flex: 0 0 25vw;
+    text-align: center;
+    font-size: 2em;
+    color: #eee;
+    text-decoration: none;
+    height: 60px;
+    line-height: 2em;
+    cursor: pointer;
+
+}
+
+#navbar nav a:hover{
+    background-color: #222;
+    color: white;
+}
+
+#homeREMOVE{
+    background-image: url(https://perezcarreno.com/wp-content/uploads/2013/01/lorempixel-image.jpeg);
+    background-size: cover;
+}
+.active{
+    background-color: red;
+}
+
+
+
+.page{
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 10px;
+    background-color: #eee;
+}
+.jumbotron{
+    background-color: rgba(255, 255, 255,0.5);
+    width: 80%;
+    margin: 100px auto;
+    border: 5px solid white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+.jumbotron h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    color: black;
+}
+.jumbotron h3{
+    font-size: 2em;
+    color: #222;
+}.col{
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+   
+
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+
+.card{
+    flex: 0 0 30%;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 20px;
+    margin: 10px 0;
+
+
+}
+.card img{
+    max-width: 100%;
+
+}
+.card h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    padding: 0px;
+    margin: 0;
+
+
+}
+.card .output{
+    padding: 0 20px 20px;
+}
+.card .output > button{
+    background-color: lightgray;
+    border: 0px;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+
+
+.main{
+    background-color: white;
+    min-height: 60vh;
+    padding: 10px;
+    font-size: 1.2em;
+}
+.myForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 500px;
+    text-align: left;
+    padding: 10px;
+    max-width: 800px;
+    margin:0 auto;
+    background-color: rgba(0,0,0,0.5);
+
+}
+.rowForm{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.rowForm .name, .rowForm .email{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 45%;
+
+    
+}
+
+
+.myForm .subject,.myForm .message{
+    width: 80%;
+    margin: 0 auto;
+}
+#email, #name, #subject{
+    width: 100px;
+    height: 50px;
+    font-size: 1.5em;
+}
+#message{
+    width: 100%;
+    font-size: 1.5em;
+
+}
+.message button{
+    height: 70px;
+    width: 100%;
+    background-color: salmon;
+    font-size: 2em;
+}
+label{
+    display: block;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.page > h2{
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom:2px solid black;
+    padding: 8px;
+    font-size: 3em;
+}
+
+.footer{
+    min-height: 200px;
+    text-align: center;
+    color: #ddd;
+    font-size: 1em;
+    padding: 20px;
+    background-color: black;
+}
+.main::first-letter{
+    font-size: 2em;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+
+
+
+@media all and(max-width:640px){
+    #navbar nav a{
+        font-size: 1.2em;
+        height: 30px;
+
+    }
+    #navbar{
+        height: 30px;
+    }
+    .row, .rowForm {
+        flex-direction: column;
+    }
+    .card{
+        flex: auto;
+    }
+    .rowForm .name, .rowForm .email{
+        width: 100%;
+        display: block;
+}
+}
